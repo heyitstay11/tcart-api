@@ -1,0 +1,15 @@
+<form>
+    <label for="name">Name</label>
+    <input type="text" name="name" autocomplete="off" value="<%= product.name %>" required placeholder="eg: HP 18">
+    <div class="name error"></div>
+    <label for="imgLink">Image Link</label>
+    <input type="url" name="imgLink" autocomplete="off" value="<%= product.imgLink %>" required>
+    <div class="imgLink error"></div>
+    <label for="price">Price</label>
+    <input type="number" name="price" autocomplete="off" value="<%= product.price %>" required>
+    <div class="price error"></div>
+    <label for="description">Description</label>
+    <textarea name="description" cols="42" rows="10"><%= product.description %></textarea>
+    <div class="description error"></div>
+    <button>Submit</button>
+</form>

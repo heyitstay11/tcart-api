@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tCart API - Sign Up</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/header'); -%>
+    <main>  
+        <h1>Register</h1>
+
+        <form>
+            <label for="username">Username</label>
+            <input type="text" name="username" autocomplete="off" required placeholder="John Doe">
+            <div class="username error"></div>
+            <label for="key">Secret Key</label>
+            <input type="text" name="key"  autocomplete="off" required>
+            <div class="key error"></div>
+            <label for="password">Password</label>
+            <input type="password" name="password" required>
+            <div class="password error"></div>
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" required>
+            <div class="confirm_password error"></div>
+            <button>Submit</button>
+        </form>
+    </main>
+    <script src="/js/signup.js"></script>
+</body>
+</html>

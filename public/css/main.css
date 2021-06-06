@@ -1,0 +1,282 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(219, 219, 219);
+  font-family: serif;
+}
+
+header {
+  background-color: rgb(0, 75, 105);
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo{
+  text-decoration: none;
+  color: inherit;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-left: 2.5rem;
+  letter-spacing: 1px;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+header ul > li {
+  margin: 0 10px;
+  font-size: 1.1rem;
+}
+
+header ul > li > a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1.5px;
+}
+
+header ul > li > a::after{
+  content: '';
+  position: absolute;
+  background-color: pink;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  transform-origin: right;
+  transition: width .25s ease-in-out;
+} 
+
+header ul > li:hover a::after{
+  width: 100%;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto ;
+  color: rgb(90, 90, 90);
+}
+
+main > h1{
+  text-align: center;
+  letter-spacing: .5px;
+  font-size: 2.2rem;
+  margin-bottom: .8rem;
+}
+
+main > p {
+  margin-top: .5rem;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  padding: 6px 10px;
+}
+
+form{
+  width: 420px;
+  max-width: 96%;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+}
+
+input{
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+
+label{
+  display: block;
+  margin: 20px 0 10px;
+}
+
+button, .edit{
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #ffda48;
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+
+.error {
+  color: tomato;
+  letter-spacing: 1px;
+  font-size: 1.05rem;
+}
+
+.products-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 0 18px;
+}
+
+.product{
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0,0,0,.25);
+  transition: all .15s ease-in;
+}
+
+.product:hover{
+  box-shadow: 0px 10px 16px rgba(0,0,0,.25);
+}
+.product > img{
+  width: 90%;
+}
+
+.info > .product-title{
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-bottom: .4rem;
+}
+
+.info > p.product-price{
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.info  > p {
+  font-size: 1.05rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+textarea {
+  width: 100%;
+  font-size: 1.05rem;
+  font-family: inherit;
+  resize: none;
+}
+
+.product-container {
+  width: 500px;
+  max-width: 96vw;
+  margin: 3rem auto;
+  text-align: center;
+  background-color: whitesmoke;
+  padding: .8rem 1rem;
+  border-radius: .4rem;
+}
+
+.product-container img {
+    width: 90%;
+    height: auto;
+}
+
+
+ .product-container .product-title{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: .6rem;
+}
+.product-container p{
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.info > p {
+  margin-top: .25rem;
+}
+
+.product-container p.product-price{
+  font-size: 1.6rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin-top: .4rem;
+}
+
+.product-btns{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-btns .edit{
+  display: block;
+  background-color: rgb(0, 179, 0);
+  text-decoration: none;
+  font-family: inherit;
+  color: whitesmoke;
+}
+.product-btns .delete{
+  background-color: tomato;
+  color: whitesmoke;
+}
+
+.product-btns form {
+  display: inline;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.primary{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: .5rem 2rem;
+  background-color: rgb(0, 0, 184);
+  color: whitesmoke;
+}
+
+pre{
+  font-size: 1.05rem;
+  width: 900px;
+  max-width: 96%;
+  padding: 1rem;
+  margin: .5rem auto;
+  background-color: #4d4d4d;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.instruction {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  margin: .5rem 1rem;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCart API - Product</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('../partials/header'); -%>
+    <main>
+        <div class="product-container">
+            <img src="<%= product.imgLink %>" height="400" width="300" alt="">
+            <div class="info">
+                <p class="product-title">
+                    <%= product.name %>
+                </p>
+                <p class="product-description">
+                    <%= product.description %>
+                </p>
+                <p class="product-price">
+                    $<%= product.price %>
+                </p>
+            </div>
+
+            <% if(user){ %>
+                <div class="product-btns">
+                    <a class="edit" href="/products/<%= product.id %>/edit" >Edit</a>
+                    <form class="delete-form" method="POST" action="/products/<%= product.id %>/delete">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken  %>"> 
+                        <button class="delete">Delete</button>
+                    </form>
+                </div>
+            <% } %>
+            
+        </div>
+    </main>
+</body>
+</html>

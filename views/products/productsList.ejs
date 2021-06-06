@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tcart API - Products List</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('../partials/header'); -%>
+
+    <main>
+        <h1>Inventory</h1>
+
+        <% if(user){%>
+            <a href="/products/add" class="primary" >Add Products</a>
+        <% } %>
+        
+        <div class="products-container">
+
+            <% products.forEach((product) => { %>
+
+                <div class="product">
+
+                    <img src="<%= product.imgLink %>"  height="150" width="150">
+                    <div class="info">
+                    <a href="/products/<%= product.id %>" rel="noopener noreferrer" class="product-title">
+                        <%= product.name %>
+                    </a>
+                    <p class="product-description">
+                        <%= product.description %>
+                    </p>
+                    <p class="product-price">
+                        $ <%= product.price %>
+                    </p>
+                    </div>
+                    
+                </div>
+
+            <% }) %>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>

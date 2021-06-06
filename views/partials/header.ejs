@@ -1,0 +1,15 @@
+<header>
+<a href="/" class="logo">
+    Tcart
+</a>
+<ul>
+    <% if(user){ %>
+    <li>Welcome,&nbsp;&nbsp;<%= user.name %> </li>
+    <li><a href="/logout">Log Out</a></li>
+    <% } else{ %>
+    <li><a href="/signup">Sign Up</a> </li>
+    <li><a href="/login">Log In</a></li>
+    <% } %>
+    
+</ul>
+</header>

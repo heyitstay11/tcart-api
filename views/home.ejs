@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tCart API - Home Page</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/header'); -%>
+    <main>
+        <h1>TCart API</h1>
+        <a class="primary" href="/products">View Products</a>
+        <h2>API Routes </h2>
+        <p class="instruction"> GET /api to get products</p> 
+        <p class="instruction">Add ?limit={num} to specify the number of products in response, it is set to 10 by default</p>
+        <pre> returns: {
+                product: {
+                    "id": "afc34",
+                    "name": "JP",
+                    "price": "499",
+                    "description": "Lorem ipsum dolor sit amet"
+                },
+                product: {
+                    "id": "afc34",
+                    "name": "JP",
+                    "price": "499",
+                    "description": "Lorem ipsum dolor sit amet"
+                },
+                product: {
+                    "id": "afc34",
+                    "name": "JP",
+                    "price": "499",
+                    "description": "Lorem ipsum dolor sit amet"
+                }
+            }
+        </pre>
+        <p class="instruction">Get /api/{id} to get an individual product</p>
+        <pre> returns: {
+                "id": "afc34",
+                "name": "JP",
+                "price": "499",
+                "description": "Lorem ipsum dolor sit amet"
+            },
+        </pre>
+    </main>
+</body>
+</html>
