@@ -15,7 +15,6 @@ const getAddProduct = (req, res) => {
 }
 
 const postAddProduct = async (req, res) => {
-    console.log(req.body);
     const { name, imgLink, price, description } = req.body;
     const errors = validationResult(req);
 

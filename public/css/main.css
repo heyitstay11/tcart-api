@@ -123,6 +123,7 @@ button, .edit{
   display: block;
   padding: 10px 16px;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 
 .error {
@@ -253,7 +254,7 @@ textarea {
   font-size: 1.4rem;
   padding: 8px 12px;
   border-radius: 4px;
-  margin: .5rem 2rem;
+  margin: 1rem 2rem;
   background-color: rgb(0, 0, 184);
   color: whitesmoke;
 }

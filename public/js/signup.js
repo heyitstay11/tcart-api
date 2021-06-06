@@ -155,11 +155,10 @@ const handleSubmit = async (e) => {
                confirmPasswordErr.textContent = data.error.confirmPassword || '';
                keyErr.textContent = data.error.key || '';
                return
+            }else{
+                location.assign('/');
             }
 
-            // if(data.auth){
-            //     location.assign('/');
-            // }
         } catch (error) {
             log(error)
         }
