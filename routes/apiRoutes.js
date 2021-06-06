@@ -1,9 +1,10 @@
 const { Router } = require('express');
 const Product = require('../models/product');
+const cors = require('cors');
 
 const router = Router();
 
-router.get('/', async (req, res) => {
+router.get('/', cors() ,async (req, res) => {
     let limit = req.query.limit ? Number(req.query.limit) : 10;
     try {
         let products = await  Product.find({}, {_id: 0}).limit(limit);
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', cors(), async (req, res) => {
     const id = req.params.id;
     try {
         let product = await Product.findOne({ id }, {_id: 0});
