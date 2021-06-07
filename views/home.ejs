@@ -16,33 +16,40 @@
         <p class="instruction"> GET /api to get products</p> 
         <p class="instruction">Add ?limit={num} to specify the number of products in response, it is set to 10 by default</p>
         <pre> returns: {
-                product: {
-                    "id": "afc34",
-                    "name": "JP",
-                    "price": "499",
-                    "description": "Lorem ipsum dolor sit amet"
+            "products": [
+                {
+                    "name": "Apple MacBook Pro",
+                    "imgLink": "https://i.imgur.com/FIt5xQ6.jpg",
+                    "price": 116990,
+                    "description": "13-inch, Apple M1 chip with 8‑core CPU and 8‑core GPU, 8GB RAM, 256GB SSD",
+                    "id": "UhsaE",
                 },
-                product: {
-                    "id": "afc34",
-                    "name": "JP",
-                    "price": "499",
-                    "description": "Lorem ipsum dolor sit amet"
+                {
+                    "name": "Acer Swift 3",
+                    "imgLink": "https://i.imgur.com/LH20GX0.jpg",
+                    "price": 63990,
+                    "description": "AMD Ryzen 5 4500U 14\" (35.56cms) Display Ultra Thin (8GB Ram/512GB SSD/Window 10",
+                    "id": "gXurQ",
                 },
-                product: {
-                    "id": "afc34",
-                    "name": "JP",
-                    "price": "499",
-                    "description": "Lorem ipsum dolor sit amet"
+                {
+                    "name": "Acer Aspire 5",
+                    "imgLink": "https://i.imgur.com/Ax8R3mT.jpg",
+                    "price": 54990,
+                    "description": "Intel Core I5 11th Gen ( 8 GB/512 GB SSD/ Windows 10 Home/ Iris Xe Graphic) A515-56-54FN with 39.6 cm (15.6 Inch) with FHD Display",
+                    "id": "yeIka",
                 }
             }
         </pre>
         <p class="instruction">Get /api/{id} to get an individual product</p>
         <pre> returns: {
-                "id": "afc34",
-                "name": "JP",
-                "price": "499",
-                "description": "Lorem ipsum dolor sit amet"
-            },
+            "product": {
+                "name": "Apple MacBook Pro",
+                "imgLink": "https://i.imgur.com/FIt5xQ6.jpg",
+                "price": 116990,
+                "description": "13-inch, Apple M1 chip with 8‑core CPU and 8‑core GPU, 8GB RAM, 256GB SSD",
+                "id": "UhsaE",
+            }
+            }
         </pre>
     </main>
 </body>
