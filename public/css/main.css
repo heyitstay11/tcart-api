@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(219, 219, 219);
+  background-color: rgb(233, 233, 233);
   font-family: serif;
 }
 
@@ -261,17 +261,19 @@ textarea {
 
 pre{
   font-size: 1.05rem;
-  width: 900px;
+  width: 1000px;
   max-width: 96%;
   padding: 1rem;
   margin: .5rem auto;
   background-color: #4d4d4d;
   color: white;
   letter-spacing: 1px;
+  overflow-x: hidden;
+  border-radius: 1rem;
 }
 
 .instruction {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 1px;
 }
